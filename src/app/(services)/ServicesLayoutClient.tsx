@@ -12,6 +12,7 @@ import {
   Upload,
   Image,
 } from "lucide-react";
+import { LogoMark } from "@/components/Logo";
 
 const sidebarItems = [
   { href: "/home", icon: LayoutDashboard, label: "Home Page" },
@@ -22,8 +23,7 @@ const sidebarItems = [
 const ServicesLayoutClient = ({
   children,
 }: Readonly<{ children: React.ReactNode }>) => {
-
-// const ServicesLayoutClient = () => {
+  // const ServicesLayoutClient = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -63,7 +63,8 @@ const ServicesLayoutClient = ({
             <div className="flex-1">
               <Link href={"/home"} onClick={handleLogoClick}>
                 <div className="btn btn-ghost normal-case text-2xl font-bold tracking-tight cursor-pointer">
-                  Cloudinary Showcase
+                  <LogoMark size={24} />
+                  Social SaaS
                 </div>
               </Link>
             </div>
@@ -105,7 +106,7 @@ const ServicesLayoutClient = ({
         <label htmlFor="sidebar-drawer" className="drawer-overlay"></label>
         <aside className="bg-base-200 w-64 h-full flex flex-col">
           <div className="flex items-center justify-center py-4">
-            <Image className="w-10 h-10 text-primary" />
+            {/* <Image className="w-10 h-10 text-primary" /> */}
           </div>
           <ul className="menu p-4 w-full text-base-content grow">
             {sidebarItems.map((item) => (
