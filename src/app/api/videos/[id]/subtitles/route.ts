@@ -55,6 +55,8 @@ export async function GET(req: Request, { params }: Ctx) {
 
 }
 
+export const maxDuration = 300
+
 // Start generation
 export async function POST(req: Request, { params }: Ctx) {
   const { id } = await params;
